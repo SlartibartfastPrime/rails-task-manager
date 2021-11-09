@@ -1,0 +1,17 @@
+
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"><%= @task.title %></h5>
+    <p class="card-text"><%= @task.details %></p>
+    <p class="card-text">Task Completed ?
+    <% if @task.completed %>
+      <%= '<i class="fas fa-check-square"></i>'.html_safe %>
+    <% else %>
+    <%= '<i class="far fa-square"></i>'.html_safe %>
+    <% end %>
+    </p>
+  </div>
+  <p class ="btn btn-warning"> <%= link_to "Edit the task", edit_task_path%> </p>
+</div>
+<%= link_to "Go back to Tasks list", tasks_path %>
